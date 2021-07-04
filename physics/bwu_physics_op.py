@@ -14,10 +14,10 @@ class  BWU_OT_Add_Rigidbody_Op(bpy.types.Operator):
         return False
             
     def execute(self,context):
-            active_obj = context.view_layer.objects.active 
+            selected_objects = bpy.context.selected_objects
             
             obNameList=[]
-            for objs in active_obj:
+            for objs in selected_objects:
                 obNameList.append(objs.name) 
                 bpy.context.rigid_body.type = 'ACTIVE'
                 bpy.context.space_data.context = 'PHYSICS'
