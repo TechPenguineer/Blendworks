@@ -36,5 +36,5 @@ class BWU_PHYSICS_PANEL(bpy.types.Panel):
         col.operator("object.apply_rigidbody", text="Add Rigidbody")
         
         col =  row.column()
-        col.operator("object.apply_passive_rigidbody", text="Make Passive")
+        col.operator("object.apply_passive_rigidbody", text="Make Collider")
 
