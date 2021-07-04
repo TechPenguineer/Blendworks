@@ -6,6 +6,11 @@
     <hr>
 </p>
 
-<p align="center">
-    <h2 style="font-size:44px;">What is Blendworks? </h2>
-</p>
+# What is Blendworks?
+
+Blendworks is a [Blender](https://blender.org) plugin that makes Blender easier to use for beginers! 
+
+
+# How does it make using Blender easier?
+
+We implement GUIS to make those confusing names more understandable. For example we change **Passive** to **Collider**. We changes **Rigidbody** to **Physics Object**. We also made a gui for all those hidden keybinds.
