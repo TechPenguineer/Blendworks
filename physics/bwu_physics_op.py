@@ -17,10 +17,10 @@ class  BWU_OT_Add_Rigidbody_Op(bpy.types.Operator):
             selected_objects = bpy.context.selected_objects
             
             obNameList=[]
+            context = bpy.context
+            scene = context.scene
             for objs in selected_objects:
-                obNameList.append(objs.name) 
-                bpy.context.rigidbody.type = 'ACTIVE'
-                bpy.context.space_data.context = 'PHYSICS'
-                bpy.ops.rigidbody.object_add(objs.name)
+                scene.objects.active = objs
+                bpy.ops.rigidbody.object_add(type='ACTIVE')
             
             return { 'FINISHED' }
