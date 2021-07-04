@@ -3,11 +3,11 @@ import bpy
 bl_info = {
     "name" : "Blendworks",
     "author" : "TechPenguineer",
-    "description" : "",
+    "description" : "Blendworks is a plugin that makes Blender easier to use for beginers",
     "blender" : (2, 80, 0),
     "version" : (0, 0, 1),
-    "location" : "",
-    "warning" : "",
+    "location" : "Palm Beach, Florida",
+    "warning" : "STLL UNDER DEVELOPMENT",
     "category" : "Generic"
 }
 
