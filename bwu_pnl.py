@@ -21,7 +21,7 @@ class BWU_MOD_PANEL(bpy.types.Panel):
 
 
 
-class BWU_PHYSICS_PANEL(bpy.types.Panel):
+class BWU_PHYSICS_PANEL(bpy.types.Panel, bpy.types.PropertyGroup):
     bl_label = "Physics"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
@@ -38,3 +38,7 @@ class BWU_PHYSICS_PANEL(bpy.types.Panel):
         col =  row.column()
         col.operator("object.apply_passive_rigidbody", text="Make Collider")
 
+        row = layout.row()
+        col =  row.column()
+        col.operator("object.remove_rigidbody", text="Remove Physics Object")
+        
