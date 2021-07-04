@@ -1,6 +1,6 @@
 import bpy 
 
-class MyClassName(bpy.types.Operator):
+class  BWU_OT_Add_Rigidbody_Op(bpy.types.Operator):
     bl_idname = "object.apply_rigidbody"
     bl_label = "Apply Rigidbody"
     bl_description = "Adds a rigidbody to the selected object(s)"
@@ -20,6 +20,7 @@ class MyClassName(bpy.types.Operator):
             for objs in active_obj:
                 obNameList.append(objs.name) 
                 bpy.context.rigid_body.type = 'ACTIVE'
-                bpy.context.space_Data
+                bpy.context.space_data.context = 'PHYSICS'
+                bpy.ops.rigidbody.object_add(objs.name)
             
             return { 'FINISHED' }
