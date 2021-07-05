@@ -105,13 +105,15 @@ class OBJECT_OT_pyhsics_settings(bpy.types.Operator):
     bl_idname = "object.physics_properties"
     bl_label = "Open Physics Properties"
     bl_options = {'REGISTER', 'UNDO'}
-    
+    fricton_value: bpy.props.FloatProperty(name="Amount of friction")    
+    selected_objects = bpy.context.selected_objects
+    obNameList=[]
+    context = bpy.context
+    scene = context.scene
+         
+    for objs in selected_objects:       
+        objs.rigid_body.friction = fricton_value
+        
     def execute(self, context):
-         selected_objects = bpy.context.selected_objects
-         fricton_value: bpy.props.FloatProperty(name="Amount of friction")
-         obNameList=[]
-         context = bpy.context
-         scene = context.scene
-         for objs in selected_objects:
-             objs.rigid_body.friction = fricton_value
-         return {'FINISHED'}
+        ...
+        return {'FINISHED'}
