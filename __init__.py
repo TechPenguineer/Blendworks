@@ -17,8 +17,9 @@ import bpy
 from . bwu_modifier_op import BWU_OT_Apply_All_Op, BWU_OT_Remove_All_Op
 from . bwu_pnl import BWU_MOD_PANEL, BWU_PHYSICS_PANEL
 from . physics.bwu_physics_op import BWU_OT_Add_Rigidbody_Op, BWU_OT_Add_Rigidbody_Passive_Op, BWU_OT_Remove_Rigidbody_Op,BWU_OT_Physics_Settings_Friction_Op,OBJECT_OT_pyhsics_settings
-
-classes = (BWU_OT_Apply_All_Op,BWU_OT_Remove_All_Op,BWU_MOD_PANEL, BWU_PHYSICS_PANEL, BWU_OT_Add_Rigidbody_Op, BWU_OT_Add_Rigidbody_Passive_Op, BWU_OT_Remove_Rigidbody_Op, BWU_OT_Physics_Settings_Friction_Op,OBJECT_OT_pyhsics_settings)
+from . mesh.bwu_custom_mesh import createOcean
+classes = (BWU_OT_Apply_All_Op,BWU_OT_Remove_All_Op,BWU_MOD_PANEL, BWU_PHYSICS_PANEL, BWU_OT_Add_Rigidbody_Op, BWU_OT_Add_Rigidbody_Passive_Op, BWU_OT_Remove_Rigidbody_Op,
+           BWU_OT_Physics_Settings_Friction_Op,OBJECT_OT_pyhsics_settings, createOcean)
 
 def register():
     for c in classes:
