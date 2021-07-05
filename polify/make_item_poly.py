@@ -1,5 +1,10 @@
 import bpy
 
+def dump(obj, text):
+    for attr in dir(obj):
+        print("%r.%s = %s" % (obj, attr, getattr(obj, attr)))
+    
+
 class change_lod(bpy.types.Operator):
     bl_idname = "object.change_lod"
     bl_label = "Polify"
@@ -8,9 +13,13 @@ class change_lod(bpy.types.Operator):
 
     @classmethod
     def poll(cls, context):
-        return True
+        return context.active_object is None
 
     def execute(self, context):
+        value = getattr(context, "button_pointer", None)
+        if value is not None:
+                dump(value, "button_pointer")
+        
         
         
         return {"FINISHED"}
