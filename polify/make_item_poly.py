@@ -11,6 +11,6 @@ class change_lod(bpy.types.Operator):
         return True
 
     def execute(self, context):
-        bpy.ops.workspace.delete()
-
+        
+        
         return {"FINISHED"}
