@@ -19,7 +19,7 @@ class BWU_MOD_PANEL(bpy.types.Panel):
         col.operator("object.remove_all_mods", text="Cancel All")
 
 
-class BWU_PHYSICS_PANEL(bpy.types.Panel, bpy.types.PropertyGroup):
+class BWU_PHYSICS_PANEL(bpy.types.Panel):
     bl_label = "Physics"
     bl_space_type = "VIEW_3D"
     bl_region_type = "UI"
@@ -46,17 +46,3 @@ class BWU_PHYSICS_PANEL(bpy.types.Panel, bpy.types.PropertyGroup):
         )
 
 
-class BWU_OPTIONS_MENU(bpy.types):
-    bl_idname = "view3d.open_bwu_context"
-    bl_label = "Blendworks"
-
-    def draw(self, context):
-        layout = self.layout
-        layout = self.layout
-
-        layout.operator("object.select_all", text="Select/Deselect All").action = 'TOGGLE'
-        layout.operator("object.select_all", text="Inverse").action = 'INVERT'
-        layout.operator("object.select_random", text="Random")
-
-
-bpy.ops.wm.call_menu(name="view3d.open_bwu_context")
