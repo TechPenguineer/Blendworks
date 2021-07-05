@@ -59,4 +59,4 @@ class POLY_WINDOW_CONTEXT(bpy.types.Menu):
         layout.separator()
         layout.operator(change_lod.bl_idname)
         
-
+ 
