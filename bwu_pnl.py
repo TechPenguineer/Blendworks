@@ -45,3 +45,11 @@ class BWU_PHYSICS_PANEL(bpy.types.Panel, bpy.types.PropertyGroup):
             fricton_value = 1.0    
         )
 
+
+class BWU_OPTIONS_MENU(bpy.types.Menu):
+    bl_idname = "view3d.open_bwu_context"
+    bl_label = "Blendworks"
+
+    def draw(self, context):
+        layout = self.layout
+        
