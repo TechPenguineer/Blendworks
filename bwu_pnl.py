@@ -46,7 +46,7 @@ class BWU_PHYSICS_PANEL(bpy.types.Panel, bpy.types.PropertyGroup):
         )
 
 
-class BWU_OPTIONS_MENU(bpy.types.Menu):
+class BWU_OPTIONS_MENU(bpy.types):
     bl_idname = "view3d.open_bwu_context"
     bl_label = "Blendworks"
 
