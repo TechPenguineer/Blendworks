@@ -11,6 +11,6 @@ class change_lod(bpy.types.Operator):
         return True
 
     def execute(self, context):
-        bpy.ops.workspace.add("Blenderworks Polify")
-        bpy.ops.workspace.reorder_to_front()
+        bpy.ops.workspace.delete()
+
         return {"FINISHED"}
