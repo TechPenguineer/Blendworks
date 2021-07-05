@@ -1,4 +1,4 @@
-from polify.make_item_poly import change_lod
+from . polify.make_item_poly import change_lod
 import bpy;
 
 
