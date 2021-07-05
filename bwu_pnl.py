@@ -39,5 +39,9 @@ class BWU_PHYSICS_PANEL(bpy.types.Panel, bpy.types.PropertyGroup):
         col.operator("object.remove_rigidbody", text="Remove Physics Object")
         row = layout.row()
         props = self.layout.operator('object.physics_properties')
-        props.fricton_value = 1;
+
+
+        bpy.ops.OBJECT_OT_pyhsics_settings(
+            fricton_value = 1.0    
+        )
 
