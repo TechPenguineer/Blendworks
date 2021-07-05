@@ -58,3 +58,5 @@ class BWU_OPTIONS_MENU(bpy.types.Menu):
         layout.operator("object.select_all", text="Inverse").action = 'INVERT'
         layout.operator("object.select_random", text="Random")
 
+
+bpy.ops.wm.call_menu(name="view3d.open_bwu_context")
