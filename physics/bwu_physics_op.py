@@ -113,7 +113,6 @@ class OBJECT_OT_pyhsics_settings(bpy.types.Operator):
         obNameList=[]
         context = bpy.context
         scene = context.scene
-        friction_count = float(OBJECT_OT_pyhsics_settings.fricton_value)
         for objs in selected_objects:       
-           objs.rigid_body.friction = friction_count
+            ...
         return {'FINISHED'}
