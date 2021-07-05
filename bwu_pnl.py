@@ -1,3 +1,4 @@
+from polify.make_item_poly import change_lod
 import bpy;
 
 
@@ -45,4 +46,17 @@ class BWU_PHYSICS_PANEL(bpy.types.Panel):
             fricton_value = 1.0    
         )
 
+
+class POLY_WINDOW_CONTEXT(bpy.types.Menu):
+    bl_label = "Unused"
+
+    def draw(self, context):
+        pass
+
+
+    def menu_func(self, context):
+        layout = self.layout
+        layout.separator()
+        layout.operator(change_lod.bl_idname)
+        
 
