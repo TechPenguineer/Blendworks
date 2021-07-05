@@ -24,4 +24,8 @@ class change_lod(bpy.types.Operator):
         if value is not None:
             dump(value, "button_prop")
         
+        value = getattr(context, "button_operator", None)
+        if value is not None:
+            dump(value, "button_operator")
+                    
         return {"FINISHED"}
