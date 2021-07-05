@@ -52,4 +52,9 @@ class BWU_OPTIONS_MENU(bpy.types.Menu):
 
     def draw(self, context):
         layout = self.layout
+        layout = self.layout
+
+        layout.operator("object.select_all", text="Select/Deselect All").action = 'TOGGLE'
+        layout.operator("object.select_all", text="Inverse").action = 'INVERT'
+        layout.operator("object.select_random", text="Random")
         
